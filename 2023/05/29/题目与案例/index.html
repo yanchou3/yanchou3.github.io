@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>Python前三章题目与案例 - Hexo</title>
+
+<!-- Icon -->
+<link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
+
+<!-- Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
+
+
+
+<!-- Style -->
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
+
+
+
+
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div class="main gt-bg-theme-color-first">
+            <div class="main-content">
+                <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Hexo
+        </div>
+    </a>
+    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
+        <i class="gt-c-content-color-first" style="font-size: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center; ">
+            
+                <div class="nav-item">
+                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
+                </div>
+            
+        </div>
+    </div>
+</nav>
+
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function() {
+        let element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else { 
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">Python前三章题目与案例</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2023-05-29 ·</time>
+                
+                    
+                
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <h2 id="Python前三章练习"><a href="#Python前三章练习" class="headerlink" title="Python前三章练习"></a>Python前三章练习</h2><p>[TOC]</p>
+<h2 id="1-编程题"><a href="#1-编程题" class="headerlink" title="1.编程题"></a>1.编程题</h2><h3 id="求一百以内奇数和与偶数和"><a href="#求一百以内奇数和与偶数和" class="headerlink" title="求一百以内奇数和与偶数和"></a>求一百以内奇数和与偶数和</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">0</span></span><br><span class="line">j=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        i = i + n</span><br><span class="line">    <span class="keyword">else</span> :</span><br><span class="line">        j = j + n</span><br><span class="line"><span class="built_in">print</span>(i,j)</span><br></pre></td></tr></table></figure>
+
+<h3 id="求m，n的最小公倍数"><a href="#求m，n的最小公倍数" class="headerlink" title="求m，n的最小公倍数"></a>求m，n的最小公倍数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;please input the first number：&quot;</span>))</span><br><span class="line">b=<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;please input the second number：&quot;</span>))</span><br><span class="line">m,n=a,b </span><br><span class="line">t=<span class="number">1</span> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="built_in">min</span>(a,b)):</span><br><span class="line">    <span class="keyword">while</span> (a%i==<span class="number">0</span> <span class="keyword">and</span> b%i==<span class="number">0</span>):</span><br><span class="line">       t*=i </span><br><span class="line">       a/=i</span><br><span class="line">       b/=i</span><br><span class="line"><span class="comment">#最小公倍数=两数乘积/最大公约数</span></span><br><span class="line">t=(m*n)/t</span><br><span class="line"><span class="built_in">print</span>((<span class="string">f&quot;<span class="subst">&#123;m&#125;</span>,<span class="subst">&#123;n&#125;</span>的最大公约数为：<span class="subst">&#123;t&#125;</span>&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> x&gt;=<span class="number">20</span> :</span><br><span class="line">    y=<span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> x&gt;=<span class="number">10</span> :</span><br><span class="line">    y=<span class="number">0.5</span>*x-<span class="number">2</span></span><br><span class="line"><span class="keyword">elif</span> x&gt;=<span class="number">5</span> :</span><br><span class="line">    y=<span class="number">3</span>*x-<span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> x&gt;=<span class="number">0</span> :</span><br><span class="line">    y=x</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">    y=<span class="number">0</span></span><br><span class="line"><span class="keyword">if</span> x==<span class="number">7</span> :</span><br><span class="line">    <span class="built_in">print</span>(y)</span><br></pre></td></tr></table></figure>
+
+<h3 id="求给定正整数的阶乘"><a href="#求给定正整数的阶乘" class="headerlink" title="求给定正整数的阶乘"></a>求给定正整数的阶乘</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line">y=<span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,x+<span class="number">1</span>):</span><br><span class="line">    y=y*i</span><br><span class="line"><span class="built_in">print</span>(y)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">3</span>,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="小球落地"><a href="#小球落地" class="headerlink" title="小球落地"></a>小球落地</h3><p>一小球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在 第10次落地时，共经过多少米？第10次反弹多高？ </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">h=<span class="number">100</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">10</span>+<span class="number">1</span>):</span><br><span class="line">    H=((<span class="number">1</span>/<span class="number">2</span>)**i)*h</span><br><span class="line">    <span class="keyword">if</span> i==<span class="number">0</span>:</span><br><span class="line">        S=<span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        S=<span class="number">100</span>+<span class="number">100</span>*(<span class="number">1</span>-(<span class="number">1</span>/<span class="number">2</span>)**(i-<span class="number">1</span>))</span><br><span class="line">    <span class="built_in">print</span>(S,H)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Height=<span class="number">100</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    Height=<span class="number">0.5</span>*Height</span><br><span class="line">    s=<span class="number">300</span>+<span class="number">200</span>*((<span class="number">0.5</span>)**i)</span><br><span class="line"><span class="built_in">print</span>(Height,s)</span><br></pre></td></tr></table></figure>
+
+<h3 id="百元百鸡"><a href="#百元百鸡" class="headerlink" title="百元百鸡"></a>百元百鸡</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">20</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">33</span>):</span><br><span class="line">        h=<span class="number">100</span>-i-j</span><br><span class="line">        <span class="keyword">if</span> <span class="number">5</span>*i+<span class="number">2</span>*j+(h/<span class="number">3</span>)==<span class="number">100</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;公鸡：%s  母鸡：%s  小鸡：%s&#x27;</span>%(i,j,h))</span><br><span class="line">            s=s+<span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
+
+<pre><code>公鸡：5  母鸡：26  小鸡：69
+公鸡：10  母鸡：12  小鸡：78
+2
+</code></pre>
+<h3 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入n值：&quot;</span>))</span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span> , n+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span> , i+<span class="number">1</span>):</span><br><span class="line">        <span class="built_in">sum</span> += j</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;1+(1+2)+(1+2+3)+...+(1+2+3+...+n)求和为：&quot;</span> + <span class="built_in">str</span>(<span class="built_in">sum</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">sumOfSeries</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>([i*(i+<span class="number">1</span>)/<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>)])</span><br><span class="line"> </span><br><span class="line"><span class="comment"># Driver Code</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    n = <span class="number">10</span></span><br><span class="line">    <span class="built_in">print</span>(sumOfSeries(n))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">eval</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入n值：&quot;</span>))</span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">    <span class="built_in">sum</span> += i*(i+<span class="number">1</span>)/<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;1+(1+2)+(1+2+3)+...+(1+2+3+...+n)求和为：&quot;</span> + <span class="built_in">str</span>(<span class="built_in">sum</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="富人与穷人的交易"><a href="#富人与穷人的交易" class="headerlink" title="富人与穷人的交易"></a>富人与穷人的交易</h3><p>一个富翁试图与陌生人做一笔换钱生意，换钱规则为：陌生人每天给富翁10万元钱，直到满一个月(30天)；而富翁第一天给陌生人1分钱，第2天给2分钱，第3天给4分钱，…，富翁每天给穷人的钱是前一天的两倍，直到满一个月，分别显示富翁给陌生人的钱和陌生人给富翁的钱各是多少？谁赚了？</p>
+<h3 id="猴子吃桃"><a href="#猴子吃桃" class="headerlink" title="猴子吃桃"></a>猴子吃桃</h3><p>猴子第一天摘了若干个桃子，当天吃了一半，还不过瘾，有多吃了一个，第二天早上又将剩下的桃子吃了一半，又多吃了一个，以后每天早上都吃了前一天剩下的一半零一个，到第10天早上想再吃时，见只剩下一个桃子，问第一天共摘了多少个桃子。</p>
+<h3 id="判断素数"><a href="#判断素数" class="headerlink" title="判断素数"></a>判断素数</h3><p>从键盘上任意输入一个自然数，判断数是否素数。如输入11，则显是：11是素数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">in</span> [n%d <span class="keyword">for</span> d <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n)]:<span class="built_in">print</span>(<span class="string">&#x27;这是一个质数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span> :<span class="built_in">print</span>(<span class="string">&#x27;这不是一个质数&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code> 100
+
+
+这不是一个质数
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x0=<span class="number">0.01</span></span><br><span class="line">s =<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">31</span>):</span><br><span class="line">    s=s+<span class="number">100000</span></span><br><span class="line">    x1=<span class="number">2</span> * x0</span><br><span class="line">    x0=x1</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;富翁赚的钱&#123;:d&#125;，陌生人赚的钱&#123;:.2f&#125;&quot;</span>.<span class="built_in">format</span>(s,x0))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">1</span></span><br><span class="line">i=<span class="number">9</span></span><br><span class="line"><span class="built_in">print</span>(i+<span class="number">1</span>,x)</span><br><span class="line"><span class="keyword">while</span> i&gt;=<span class="number">1</span> <span class="keyword">and</span> i &lt;= <span class="number">9</span>:</span><br><span class="line">    x=<span class="number">2</span>*(x+<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(i,x)</span><br><span class="line">    i-=<span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;第一天摘了<span class="subst">&#123;x&#125;</span>个桃子&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">flag=<span class="literal">True</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,x):</span><br><span class="line">    <span class="keyword">if</span> x % i == <span class="number">0</span>:</span><br><span class="line">        flag=<span class="literal">False</span></span><br><span class="line"><span class="keyword">if</span> flag:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;这是素数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;这不是素数&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="韩信点兵"><a href="#韩信点兵" class="headerlink" title="韩信点兵"></a>韩信点兵</h3><p>韩信点兵的典故：韩信带1500名士兵去打仗，战死四五百人，剩下的士兵按3人一排多出2人，5人一排多出4人，7人一排多出6人，编程计算机剩下士兵的人数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>,<span class="number">1101</span>):</span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">3</span>==<span class="number">2</span> <span class="keyword">and</span> i%<span class="number">5</span>==<span class="number">4</span> <span class="keyword">and</span> i%<span class="number">7</span>==<span class="number">6</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;剩下的士兵有 %d 人&quot;</span>%i)</span><br></pre></td></tr></table></figure>
+
+<h3 id="斐波拉契数列"><a href="#斐波拉契数列" class="headerlink" title="斐波拉契数列"></a>斐波拉契数列</h3><p>编程产生菲波拉契数列20项，例如：0  1   1  2  3   5   8   13    21    ……</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">nterms = <span class="number">20</span></span><br><span class="line">n1 = <span class="number">0</span></span><br><span class="line">n2 = <span class="number">1</span></span><br><span class="line">count = <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;前二十项斐波那契数列：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(n1,<span class="string">&quot;,&quot;</span>,n2,end=<span class="string">&quot; , &quot;</span>)</span><br><span class="line"><span class="keyword">while</span> count &lt; nterms:</span><br><span class="line">    nth = n1 + n2</span><br><span class="line">    <span class="built_in">print</span>(nth,end=<span class="string">&quot; , &quot;</span>)</span><br><span class="line">    n1 = n2</span><br><span class="line">    n2 = nth</span><br><span class="line">    count += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>使用列表生成式随机产生10个两位的正整数，存入列表ls中，输出ls中的这10个随机数， 然后对这10个随机数求平均值，并输出统计高于平均值的数有多少个。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用列表生成式随机产生10个两位的正整数</span></span><br><span class="line">ls = [random.randint(<span class="number">10</span>, <span class="number">99</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出ls中的这10个随机数</span></span><br><span class="line"><span class="built_in">print</span>(ls)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对这10个随机数求平均值</span></span><br><span class="line">avg = <span class="built_in">sum</span>(ls) / <span class="built_in">len</span>(ls)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出平均值</span></span><br><span class="line"><span class="built_in">print</span>(avg)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计高于平均值的数有多少个</span></span><br><span class="line">count = <span class="built_in">len</span>(<span class="built_in">list</span>(<span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x &gt; avg, ls)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出统计结果</span></span><br><span class="line"><span class="built_in">print</span>(count)</span><br></pre></td></tr></table></figure>
+
+<p>#使用for循环依次输入三个整数放在一个列表中，请把这三个数由小到大输出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-选填判断"><a href="#2-选填判断" class="headerlink" title="2.选填判断"></a>2.选填判断</h2><p>程序中异常处理结构在大多数情况下是<strong>有</strong>必要的</p>
+<blockquote>
+<p>eval()函数的作用是将字符串解析成数值</p>
+</blockquote>
+<blockquote>
+<p>Python不允许使用关键词作为变量名，允许使用内置函数作为变量名，但这会改变函数名的含义<br>在Python中，有时会自动把整数转换成浮点数，以避免数据丢失1。这通常发生在以下情况：<br>当两种不同类型的数据进行运算时，较低数据类型（整数）就会转换为较高数据类型（浮点数）。例如，3 + 4.5 &#x3D; 7.5。<br>当使用float()函数将一个数值或字符串转换成浮点数时。例如，float(3) &#x3D; 3.0。<br>当使用表示幂运算时，如果指数是小数或负数，结果就会是浮点数。例如，2(-1) &#x3D; 0.5。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">操作数1</th>
+<th align="center">操作数2</th>
+<th align="center">运算符and</th>
+<th align="center">运算符or</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">真</td>
+<td align="center">假</td>
+<td align="center">假</td>
+<td align="center">真</td>
+</tr>
+<tr>
+<td align="center">假</td>
+<td align="center">真</td>
+<td align="center">假</td>
+<td align="center">真</td>
+</tr>
+<tr>
+<td align="center">真a</td>
+<td align="center">真b</td>
+<td align="center">真b</td>
+<td align="center">真a</td>
+</tr>
+<tr>
+<td align="center">假a</td>
+<td align="center">假b</td>
+<td align="center">假a</td>
+<td align="center">假b</td>
+</tr>
+</tbody></table>
+<p>discard()和remove()都可以删除指定的元素，但是如果元素不存在，discard()不会报错，而remove()会报错。<br><br>pop()会随机删除并返回一个元素，但是如果集合为空，pop()会报错。<br><br>clear()会清空整个集合，不返回任何值。</p>
+<p>remove(‘张无忌’)对<br>remove[3]错</p>
+<p>d1.update(d2)是Python中的一个方法，它可以把d2字典中的键值对添加到d1字典中，如果有重复的键，就用d2的值覆盖d1的值12。</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">ASCII码</th>
+<th align="center">字符</th>
+<th align="center">ASCII码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A</td>
+<td align="center">65</td>
+<td align="center">a</td>
+<td align="center">97</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">66</td>
+<td align="center">b</td>
+<td align="center">98</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">67</td>
+<td align="center">c</td>
+<td align="center">99</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">68</td>
+<td align="center">d</td>
+<td align="center">100</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">69</td>
+<td align="center">e</td>
+<td align="center">101</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td align="center">70</td>
+<td align="center">f</td>
+<td align="center">102</td>
+</tr>
+<tr>
+<td align="center">G</td>
+<td align="center">71</td>
+<td align="center">g</td>
+<td align="center">103</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center">72</td>
+<td align="center">h</td>
+<td align="center">104</td>
+</tr>
+<tr>
+<td align="center">I</td>
+<td align="center">73</td>
+<td align="center">i</td>
+<td align="center">105</td>
+</tr>
+<tr>
+<td align="center">J</td>
+<td align="center">74</td>
+<td align="center">j</td>
+<td align="center">106</td>
+</tr>
+<tr>
+<td align="center">K</td>
+<td align="center">75</td>
+<td align="center">k</td>
+<td align="center">107</td>
+</tr>
+<tr>
+<td align="center">L</td>
+<td align="center">76</td>
+<td align="center">l</td>
+<td align="center">108</td>
+</tr>
+<tr>
+<td align="center">M</td>
+<td align="center">77</td>
+<td align="center">m</td>
+<td align="center">109</td>
+</tr>
+<tr>
+<td align="center">N</td>
+<td align="center">78</td>
+<td align="center">n</td>
+<td align="center">110</td>
+</tr>
+<tr>
+<td align="center">O</td>
+<td align="center">79</td>
+<td align="center">o</td>
+<td align="center">111</td>
+</tr>
+<tr>
+<td align="center">P</td>
+<td align="center">80</td>
+<td align="center">p</td>
+<td align="center">112</td>
+</tr>
+<tr>
+<td align="center">Q</td>
+<td align="center">81</td>
+<td align="center">q</td>
+<td align="center">113</td>
+</tr>
+<tr>
+<td align="center">R</td>
+<td align="center">82</td>
+<td align="center">r</td>
+<td align="center">114</td>
+</tr>
+<tr>
+<td align="center">S</td>
+<td align="center">83</td>
+<td align="center">s</td>
+<td align="center">115</td>
+</tr>
+<tr>
+<td align="center">T</td>
+<td align="center">84</td>
+<td align="center">t</td>
+<td align="center">116</td>
+</tr>
+<tr>
+<td align="center">U</td>
+<td align="center">85</td>
+<td align="center">u</td>
+<td align="center">117</td>
+</tr>
+<tr>
+<td align="center">V</td>
+<td align="center">86</td>
+<td align="center">v</td>
+<td align="center">118</td>
+</tr>
+<tr>
+<td align="center">W</td>
+<td align="center">87</td>
+<td align="center">w</td>
+<td align="center">119</td>
+</tr>
+<tr>
+<td align="center">X</td>
+<td align="center">88</td>
+<td align="center">x</td>
+<td align="center">120</td>
+</tr>
+<tr>
+<td align="center">Y</td>
+<td align="center">89</td>
+<td align="center">y</td>
+<td align="center">121</td>
+</tr>
+<tr>
+<td align="center">Z</td>
+<td align="center">90</td>
+<td align="center">z</td>
+<td align="center">122</td>
+</tr>
+</tbody></table>
+<p>python中函数分为：<strong>内置函数</strong>，<strong>标准函数</strong>，<strong>第三方库函数</strong>，<strong>用户自定义函数</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="布尔值和类型判断"><a href="#布尔值和类型判断" class="headerlink" title="布尔值和类型判断"></a>布尔值和类型判断</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;apple.peach,banana,pear&#x27;</span>.find(<span class="string">&#x27;ppp&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果在字符串中找不到对应的字符，则find()返回-1</p>
+</blockquote>
+<blockquote>
+<p>count()方法要是在字符串中找不到对应字符就返回0</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">not</span> (<span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">not</span> <span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>&lt;<span class="number">5</span>&gt;<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>(<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>(<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>(<span class="number">2</span>&gt;<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="keyword">or</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">3</span>+<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;ab&#x27;</span> <span class="keyword">in</span> <span class="string">&#x27;acbed&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>(<span class="number">3</span>+<span class="number">4</span>) <span class="keyword">in</span> (<span class="built_in">int</span>,<span class="built_in">float</span>,<span class="built_in">bool</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;ABC10&#x27;</span>.isdigit()</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h3><p>Python字符串格式化有四种主要的方法1：</p>
+<p>旧式的字符串格式化（%运算符）<br><br>新式的字符串格式化（str.format方法）<br><br>字符串插值&#x2F;f-字符串（Python 3.6+）<br><br>模板字符串（标准库）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;aaasdf&#x27;</span>.lstrip(<span class="string">&#x27;as&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test.py&#x27;</span>.endswith(<span class="string">&#x27;.py&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;</span>.join(<span class="string">&#x27;asddssfff&#x27;</span>.split(<span class="string">&#x27;sd&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abcab&#x27;</span>.replace(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;yy&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;hello world&#x27;</span>.lower().upper()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc10&#x27;</span>.isalnum()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc10&#x27;</span>.isalpha()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;C:\\windows\\notepad.exe&#x27;</span>.endswith(<span class="string">&#x27;.exe&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;Beautiful is better than ugly&#x27;</span>.startswith(<span class="string">&#x27;Be&#x27;</span>,<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chr</span>(<span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)-<span class="number">32</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chr</span>(<span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)+<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="string">&#x27;hello world&#x27;</span></span><br><span class="line">x.replace(<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;g&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(<span class="string">&quot;hello中国！&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;hello world!&#x27;</span>[-<span class="number">4</span>:]</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(<span class="string">&#x27;3+5&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;:&#x27;</span>.join(<span class="string">&#x27;hello world.&#x27;</span>.split())</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;</span>.join(<span class="built_in">list</span>(<span class="string">&#x27;hello world!&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(<span class="string">&#x27;hello world!&#x27;</span>.ljust(<span class="number">20</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">round</span>(<span class="number">3.7</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>(<span class="number">3</span>+<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;春眠不觉晓。&#x27;</span>.replace(<span class="string">&quot; &quot;</span>,<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">3</span>,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;ABC&quot;</span>&gt;<span class="string">&quot;ab&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">False</span>+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abcdefg&#x27;</span>.split(<span class="string">&#x27;d&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="数学函数运用（包括循环）"><a href="#数学函数运用（包括循环）" class="headerlink" title="数学函数运用（包括循环）"></a>数学函数运用（包括循环）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">999</span>+<span class="number">1</span>):</span><br><span class="line">    <span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):</span><br><span class="line">        <span class="keyword">if</span> n % i == <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">sum</span> += i</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">sum</span> == n:</span><br><span class="line">        <span class="built_in">print</span>(n, end=<span class="string">&quot;  &quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>,<span class="number">999</span>+<span class="number">1</span>):</span><br><span class="line">    a=i//<span class="number">100</span></span><br><span class="line">    b=i//<span class="number">10</span>%<span class="number">10</span></span><br><span class="line">    c=i%<span class="number">10</span></span><br><span class="line">    <span class="keyword">if</span> a**<span class="number">3</span> +b**<span class="number">3</span> +c**<span class="number">3</span> ==i:</span><br><span class="line">        <span class="built_in">print</span>(i,end=<span class="string">&quot;  &quot;</span>)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">k=<span class="number">16</span></span><br><span class="line"><span class="keyword">while</span> k&gt;<span class="number">1</span>:</span><br><span class="line">    k=k/<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(k)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    <span class="built_in">print</span>(i+<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>(<span class="built_in">range</span>(<span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;是回文&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line">i=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> i&lt;=<span class="number">10</span>:</span><br><span class="line">    <span class="built_in">sum</span>=<span class="built_in">sum</span>+i</span><br><span class="line">    i=i+<span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">True</span>*<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">371</span></span><br><span class="line"><span class="built_in">print</span>(x%<span class="number">100</span>//<span class="number">10</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        sums1 += i</span><br><span class="line"><span class="built_in">print</span>(sums1)</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">2</span> != <span class="number">0</span>:</span><br><span class="line">        sums2 += i</span><br><span class="line"><span class="built_in">print</span>(sums2)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>首先要创建sums1和sums2变量，然后sums1+&#x3D;i即sums1&#x3D;sums1+i中右边的sums1才能加入计算</p>
+</blockquote>
+<blockquote>
+<p>第一个if后的’print(sums1)’缩进不对，同一个语句块下的语句缩进量应该保持一致。</p>
+</blockquote>
+<blockquote>
+<p>报错是告诉你第二个if使用的不对，因为if不是左定格，又不在嵌套结构里面</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line">i=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> i&lt;=<span class="number">10</span>:</span><br><span class="line">    <span class="built_in">sum</span>=<span class="built_in">sum</span>+i</span><br><span class="line">    i=i+<span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">str_max</span>(<span class="params">str1,str2</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    比较 2 个字符串的大小</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="built_in">str</span> = str1 <span class="keyword">if</span> str1 &gt; str2 <span class="keyword">else</span> str2</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">str</span></span><br><span class="line"><span class="built_in">help</span>(str_max)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+            </div>
+        </article>
+    </div>
+    <br>
+    
+        <div class="next-prev-post">
+            
+            
+                <div class="next-post">
+                    <div class="next gt-c-content-color-first">
+                        下一篇：<a href="/2023/05/28/%E5%B8%B8%E7%94%A8%E7%9A%84hexo%E5%91%BD%E4%BB%A4/" 
+                            class="post-title gt-a-link">常用的hexo命令</a>
+                    </div>
+                </div>
+            
+        </div>
+    
+    
+
+    
+
+    
+</div>
+
+                <div class="site-footer gt-c-content-color-first">
+    <div class="footer-main">
+        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
+        <!-- 文件位置：layout/_includes/footer.ejs -->
+        <span style="text-align: right; float: right;">Theme <a 
+            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
+            href="https://hexo.io" target="_blank">Hexo</a></span>
+        <span style="text-align: left;">Footer HTML
+</span>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </body>
+</html>
