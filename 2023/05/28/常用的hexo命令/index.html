@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>just a try - Hexo</title>
+<title>Hexo</title>
 
 <!-- Icon -->
 <link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
@@ -85,7 +85,7 @@
                 <div class="post-container">
     <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
         <article class="gt-post-content">
-            <h1 class="post-title">just a try</h1>
+            <h1 class="post-title">(无标题)</h1>
             <div class="post-info">
                 <time class="post-time gt-c-content-color-first">
                     · 2023-05-28 ·</time>
@@ -95,7 +95,26 @@
             </div>
             <hr>
             <div class="post-content gt-c-content-color-first">
-                
+                <h1 id="1-端口"><a href="#1-端口" class="headerlink" title="1.端口"></a>1.端口</h1><ul>
+<li>检查4000端口是否有被占用<br>  netstat -o -n -a | findstr :4000</li>
+<li>结束端口进程<br>  taskkill &#x2F;F &#x2F;PID 3628<blockquote>
+<p>‘3628’处为最末尾数字</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="2-连接"><a href="#2-连接" class="headerlink" title="2.连接"></a>2.连接</h1><pre><code>ssh -T git@github.com
+</code></pre>
+<h1 id="3-常用的hexo命令"><a href="#3-常用的hexo命令" class="headerlink" title="3.常用的hexo命令"></a>3.常用的hexo命令</h1><ul>
+<li>启用本地服务器，并预览主题<br>  hexo s</li>
+</ul>
+<p>*清除缓存文件和已生成的静态文件<br>    hexo clean</p>
+<ul>
+<li><p>生成网站静态文件到默认设置的<code>public</code>文件夹<br>  hexo g</p>
+</li>
+<li><p>生成网站静态文件，并部署到设定的仓库<br>  hexo d</p>
+</li>
+</ul>
+
             </div>
         </article>
     </div>
@@ -103,18 +122,11 @@
     
         <div class="next-prev-post">
             
-                <div class="prev-post">
-                    <div class="prev gt-c-content-color-first">
-                        上一篇：<a href="/2023/05/28/1.%E3%80%90%E7%9B%91%E5%88%A9%E7%BD%AE%E5%8E%BF%E7%94%B1%E6%9D%A5%E3%80%91/" 
-                            class="post-title gt-a-link">1.【监利置县由来】</a>
-                    </div>
-                </div>
-            
             
                 <div class="next-post">
                     <div class="next gt-c-content-color-first">
-                        下一篇：<a href="/2023/05/28/hello-world/" 
-                            class="post-title gt-a-link">Hello World</a>
+                        下一篇：<a href="/2023/05/28/%E6%9F%90%E6%97%A5%E5%AF%B9%E4%BA%8E%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C%E4%B8%8E%E5%8D%9A%E5%BC%88%E7%9A%84%E7%9C%8B%E6%B3%95/" 
+                            class="post-title gt-a-link">某日对于团队合作与博弈的看法</a>
                     </div>
                 </div>
             
