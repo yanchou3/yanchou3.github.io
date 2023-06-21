@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>Hexo</title>
+
+<!-- Icon -->
+<link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
+
+<!-- Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
+
+
+
+<!-- Style -->
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
+
+
+
+
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div class="main gt-bg-theme-color-first">
+            <div class="main-content">
+                <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Hexo
+        </div>
+    </a>
+    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
+        <i class="gt-c-content-color-first" style="font-size: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center; ">
+            
+                <div class="nav-item">
+                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
+                </div>
+            
+        </div>
+    </div>
+</nav>
+
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function() {
+        let element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else { 
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">(无标题)</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2023-06-21 ·</time>
+                
+                    
+                
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <hr>
+<h2 id="title-大数据分析与应用实例"><a href="#title-大数据分析与应用实例" class="headerlink" title="title:大数据分析与应用实例"></a>title:大数据分析与应用实例</h2><h2 id="0-准备工作"><a href="#0-准备工作" class="headerlink" title="0.准备工作"></a>0.准备工作</h2><h3 id="0-1介绍声明"><a href="#0-1介绍声明" class="headerlink" title="0.1介绍声明"></a>0.1介绍声明</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="comment"># Python 3.7.0 </span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">文件:ForFinalExam.py</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">时间:xx</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">作者:xx</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">功能:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1.制作一份自己的简历,学号姓名是真实的</span></span><br><span class="line"><span class="string">2.使用分词工具对简历进行分词</span></span><br><span class="line"><span class="string">3.使用图云工具生成图云 </span></span><br><span class="line"><span class="string">4.使用画图工具对简历中的部分数据进行绘图 </span></span><br><span class="line"><span class="string">5.提交word文档,文档中要求有代码</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">版本:1.0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">说明:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#这里的path是简历文件的路径，我采用的是绝对路径</span></span><br><span class="line">GetPath=<span class="string">r&quot;C:\Users\rrg\Desktop\ForFinalExam\简历.docx&quot;</span></span><br><span class="line"><span class="comment">#存放简历的地方</span></span><br><span class="line">SavePath=<span class="string">r&quot;C:\Users\rrg\Desktop\ForFinalExam&quot;</span></span><br><span class="line"><span class="comment">#保存一些运行结果图的地方</span></span><br><span class="line">StopWordsDic=<span class="string">r&quot;C:\Users\rrg\Desktop\ForFinalExam\stopwords.txt&quot;</span></span><br><span class="line"><span class="comment">#停用词</span></span><br><span class="line">WordCloudShapePath=<span class="string">r&quot;C:\Users\rrg\Desktop\ForFinalExam\shape.jpg&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-从简历中获得文本内容"><a href="#1-从简历中获得文本内容" class="headerlink" title="1.从简历中获得文本内容"></a>1.从简历中获得文本内容</h2><h3 id="1-1用docx库"><a href="#1-1用docx库" class="headerlink" title="1.1用docx库"></a>1.1用docx库</h3><blockquote>
+<p>docx库目前还不支持通过API直接读取文本框里的文本内容。<br><br>需要使用lxml或者python-docx2txt这样的库来解析XML文档，找到文本框对应的元素。<br><br>或者尝试把文本框换成浮动的表格，这样就可以用docx库的tables属性来访问里面的文字。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;这里尝试使用第一种方案：使用lxml解析XML文档找到文本框对应的元素&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line">doc=Document(GetPath)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> doc.element.body.<span class="built_in">iter</span>():</span><br><span class="line">    <span class="comment">#只处理textbox</span></span><br><span class="line">    <span class="keyword">if</span> child.tag.endswith(<span class="string">&#x27;textbox&#x27;</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;\n<span class="subst">&#123;<span class="string">&quot;=&quot;</span>*<span class="number">40</span>&#125;</span>&#x27;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="comment">#遍历文本框中每个子节点</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> child.<span class="built_in">iter</span>():</span><br><span class="line">            c_tag=c.tag</span><br><span class="line">            <span class="comment">#遇到段落换行</span></span><br><span class="line">            <span class="keyword">if</span> c_tag.endswith(<span class="string">&#x27;main&#125;pPr&#x27;</span>):</span><br><span class="line">                <span class="built_in">print</span>()</span><br><span class="line">            <span class="keyword">elif</span> c_tag.endswith(<span class="string">&#x27;main&#125;r&#x27;</span>):</span><br><span class="line">                <span class="built_in">print</span>(c.text,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="comment">#结果呈现在输出栏</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"></span><br><span class="line">file = Document(GetPath)</span><br><span class="line">children = file.element.body.<span class="built_in">iter</span>()</span><br><span class="line">child_iters = []</span><br><span class="line">tags = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> children:</span><br><span class="line">    <span class="comment"># 通过类型判断目录</span></span><br><span class="line">    <span class="keyword">if</span> child.tag.endswith(<span class="string">&#x27;textbox&#x27;</span>):</span><br><span class="line">        <span class="keyword">for</span> ci <span class="keyword">in</span> child.<span class="built_in">iter</span>():</span><br><span class="line">            tags.append(ci.tag)</span><br><span class="line">            <span class="keyword">if</span> ci.tag.endswith((<span class="string">&#x27;main&#125;r&#x27;</span>, <span class="string">&#x27;main&#125;pPr&#x27;</span>)):</span><br><span class="line">                child_iters.append(ci)</span><br><span class="line">                </span><br><span class="line">text = [<span class="string">&#x27;&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> ci <span class="keyword">in</span> child_iters :</span><br><span class="line">    <span class="keyword">if</span> ci.tag.endswith(<span class="string">&#x27;main&#125;pPr&#x27;</span>):</span><br><span class="line">        text.append(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        text[-<span class="number">1</span>] += ci.text</span><br><span class="line">    ci.text = <span class="string">&#x27;&#x27;</span></span><br><span class="line">text=trans_text = [<span class="string">&#x27;***&#x27;</span>+t+<span class="string">&#x27;***&#x27;</span> <span class="keyword">for</span> t <span class="keyword">in</span> text]</span><br><span class="line">text=<span class="string">&quot;。&quot;</span>.join(text)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;成功完成第一步：获取文本内容如下\n&quot;</span>,text)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2用textract库"><a href="#1-2用textract库" class="headerlink" title="1.2用textract库"></a>1.2用textract库</h3><blockquote>
+<p>会重复两段文本内容</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> textract</span><br><span class="line"><span class="comment"># 从一个.doc文件中提取文本内容</span></span><br><span class="line">text = textract.process(path).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3直接读取"><a href="#1-3直接读取" class="headerlink" title="1.3直接读取"></a>1.3直接读取</h3><blockquote>
+<p>读出来的内容需要转码吧</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(path, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:<span class="comment"># 此处已经打开文件并将 f 作为文件对象</span></span><br><span class="line">    <span class="built_in">str</span> = f.read()<span class="comment"># 读取文本</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4直接转换"><a href="#1-4直接转换" class="headerlink" title="1.4直接转换"></a>1.4直接转换</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> win32com <span class="keyword">import</span> client <span class="keyword">as</span> wc</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Translate</span>(<span class="params"><span class="built_in">input</span>, output</span>):</span><br><span class="line">    <span class="comment"># 转换</span></span><br><span class="line">    wordapp = wc.Dispatch(<span class="string">&#x27;Word.Application&#x27;</span>)</span><br><span class="line">    doc = wordapp.Documents.Open(<span class="built_in">input</span>)</span><br><span class="line">    <span class="comment"># 为了让python可以在后续操作中r方式读取txt和不产生乱码，参数为4</span></span><br><span class="line">    doc.SaveAs(output, <span class="number">4</span>)</span><br><span class="line">    doc.Close()</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    input_file = <span class="string">&quot;inpux.docx&quot;</span></span><br><span class="line">    output_file = <span class="string">&quot;output.txt&quot;</span></span><br><span class="line">    Translate(input_file, output_file)</span><br><span class="line">    </span><br><span class="line">Translate(GetPath,SavePath)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-分词并制作词频文件"><a href="#2-分词并制作词频文件" class="headerlink" title="2.分词并制作词频文件"></a>2.分词并制作词频文件</h2><h3 id="2-1设置停用词列表"><a href="#2-1设置停用词列表" class="headerlink" title="2.1设置停用词列表"></a>2.1设置停用词列表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"><span class="keyword">import</span> jieba.posseg <span class="keyword">as</span> psg</span><br><span class="line"><span class="comment">#引入分词工具以及词性标注接口</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">StopWordsList</span>(<span class="params">filepath</span>):</span><br><span class="line">    stopwords = [line.strip() <span class="keyword">for</span> line <span class="keyword">in</span> <span class="built_in">open</span>(filepath,<span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>).readlines()]</span><br><span class="line">    <span class="keyword">return</span> stopwords</span><br><span class="line"><span class="comment">#设置停用词列表</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2处理文本"><a href="#2-2处理文本" class="headerlink" title="2.2处理文本"></a>2.2处理文本</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">wordfreq</span>(<span class="params">filepath,text,topn</span>):<span class="comment">#文本文件路径、文本内容、需要统计的词频数量</span></span><br><span class="line">    <span class="comment"># seg=psg.cut(text.strip())#strip()方法用于移除字符串头尾指定的字符（默认为空格）或字符序列</span></span><br><span class="line">    <span class="comment"># words=[x.word for x in seg if x.flag==&#x27;n&#x27;]</span></span><br><span class="line">    words=jieba.lcut(text)</span><br><span class="line">    counts=&#123;&#125;<span class="comment">#创建一个用于统计词频的空词典</span></span><br><span class="line">    stopwords=StopWordsList(StopWordsDic)</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(word)==<span class="number">1</span>:<span class="comment">#单字词直接忽略跳过</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">elif</span> word <span class="keyword">not</span> <span class="keyword">in</span> stopwords:</span><br><span class="line">            counts[word]=counts.get(word,<span class="number">0</span>)+<span class="number">1</span></span><br><span class="line">    items=<span class="built_in">list</span>(counts.items())</span><br><span class="line">    items.sort(key = <span class="keyword">lambda</span> x:x[<span class="number">1</span>],reverse=<span class="literal">True</span>)<span class="comment">#按照升序排序词频</span></span><br><span class="line">    <span class="keyword">return</span> counts</span><br><span class="line"><span class="comment">#将原文本分词并生成相应的词频文件</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;成功完成第二步：分词处理文本并统计词频如下\n&quot;</span>,wordfreq(GetPath,text,<span class="number">50</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3生成词频文件（如果需要）"><a href="#2-3生成词频文件（如果需要）" class="headerlink" title="2.3生成词频文件（如果需要）"></a>2.3生成词频文件（如果需要）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f=<span class="built_in">open</span>(filepath[:-<span class="number">5</span>]+<span class="string">&#x27;_词频.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)<span class="comment">#使用原本的文件名+&#x27;_词频.txt&#x27;组合成新的词频文件名</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(topn):<span class="comment">#根据需要决定需要采用的词频数</span></span><br><span class="line">    word,count=items[i]</span><br><span class="line">    f.writelines(<span class="string">&quot;&#123;&#125;\t&#123;&#125;\n&quot;</span>.<span class="built_in">format</span>(word,count))</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-制作词云图并输出"><a href="#3-制作词云图并输出" class="headerlink" title="3.制作词云图并输出"></a>3.制作词云图并输出</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;制定词云图的形状&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> wordcloud</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.family&#x27;</span>] =<span class="string">&#x27;Microsoft YaHei&#x27;</span><span class="comment">#用系统字体修改matplotlib库中的rcParams参数词典的&#x27;font.family&#x27;键对应的数值</span></span><br><span class="line"><span class="comment">#导入matplotlib库,并使matplotlib绘图正常显示中文</span></span><br><span class="line"><span class="keyword">from</span> imageio.v2 <span class="keyword">import</span> imread</span><br><span class="line">bg_pic=imread(WordCloudShapePath)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mycloud=wordcloud.WordCloud(width=<span class="number">10000</span>,height=<span class="number">10000</span>,scale=<span class="number">10</span>,background_color=<span class="string">&#x27;white&#x27;</span>,max_words=<span class="number">200</span>,max_font_size=<span class="number">100</span>,margin=<span class="number">2</span>,font_path=<span class="string">r&#x27;C:\Windows\Fonts\msyh.ttc&#x27;</span>,mask=bg_pic).generate_from_frequencies(wordfreq(GetPath,text))</span><br><span class="line">mycloud.to_file(SavePath+<span class="string">&#x27;\wordcloud.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#制定词云图</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;成功完成第三步：绘制词云图如下\n&quot;</span>)</span><br><span class="line">plt.imshow(mycloud, interpolation=<span class="string">&quot;bilinear&quot;</span>)</span><br><span class="line">plt.axis(<span class="string">&quot;off&quot;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#展示</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-画数据图"><a href="#4-画数据图" class="headerlink" title="4.画数据图"></a>4.画数据图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.family&#x27;</span>] =<span class="string">&#x27;Microsoft YaHei&#x27;</span><span class="comment">#用系统字体修改matplotlib库中的rcParams参数词典的&#x27;font.family&#x27;键对应的数值</span></span><br><span class="line"><span class="comment">#导入matplotlib库,并使matplotlib绘图正常显示中文</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-1成绩图"><a href="#4-1成绩图" class="headerlink" title="4.1成绩图"></a>4.1成绩图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">labels1 = <span class="string">&#x27;me&#x27;</span>, <span class="string">&#x27;others&#x27;</span></span><br><span class="line">data1 = [<span class="number">4</span>, <span class="number">293</span>]</span><br><span class="line">explode1 = (<span class="number">0.1</span>,<span class="number">0</span>)  </span><br><span class="line"></span><br><span class="line">labels2 = <span class="string">&#x27;my GPA&#x27;</span>, <span class="string">&#x27;the remain&#x27;</span></span><br><span class="line">data2 = [<span class="number">4.69</span>, <span class="number">0.31</span>]</span><br><span class="line">explode2 = (<span class="number">0.1</span>,<span class="number">0</span>)  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个一行二列的子图</span></span><br><span class="line">fig, (ax1, ax2) = plt.subplots(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在第一个子图中绘制第一个饼图</span></span><br><span class="line">ax1.pie(data1, labels=labels1, autopct=<span class="string">&#x27;%1.1f%%&#x27;</span>, explode=explode1)</span><br><span class="line">ax1.set_title(<span class="string">&#x27;Me vs Others&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在第二个子图中绘制第二个饼图</span></span><br><span class="line">ax2.pie(data2, labels=labels2, autopct=<span class="string">&#x27;%1.1f%%&#x27;</span>, explode=explode2)</span><br><span class="line">ax2.set_title(<span class="string">&#x27;My GPA vs The Remain&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示子图</span></span><br><span class="line">plt.savefig(SavePath+<span class="string">&#x27;\pic1.jpg&#x27;</span>,dpi=<span class="number">300</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2履历图"><a href="#4-2履历图" class="headerlink" title="4.2履历图"></a>4.2履历图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import matplotlib.pyplot as plt</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.family&#x27;</span>] =<span class="string">&#x27;Microsoft YaHei&#x27;</span><span class="comment">#用系统字体修改matplotlib库中的rcParams参数词典的&#x27;font.family&#x27;键对应的数值</span></span><br><span class="line"><span class="comment">#导入matplotlib库,并使matplotlib绘图正常显示中文</span></span><br><span class="line">p1 = [<span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">plt.text(<span class="number">1.25</span>,<span class="number">1.5</span>,<span class="string">&#x27;学习优秀奖3次&#x27;</span>)</span><br><span class="line">plt.text(<span class="number">2.75</span>,<span class="number">3</span>,<span class="string">&#x27;校级科研创新基金、校级大学生创新创业项目&#x27;</span>)</span><br><span class="line">plt.text(<span class="number">2.25</span>,<span class="number">2.75</span>,<span class="string">&#x27;校级优秀学生标兵、优秀共青团员、社会实践优秀个人&#x27;</span>)</span><br><span class="line">plt.text(<span class="number">2.75</span>,<span class="number">4</span>,<span class="string">&#x27;发表论文《On the Impact of factor Flow on Urban-rural Integration at Coumtry 》&#x27;</span>)</span><br><span class="line">p2 = [<span class="number">5</span>, <span class="number">5</span>]</span><br><span class="line"><span class="comment"># 第一个参数是x的取值范围 第二个参数是y的取值范围</span></span><br><span class="line">plt.plot([p1[<span class="number">0</span>], p2[<span class="number">0</span>]], [p1[<span class="number">1</span>], p2[<span class="number">1</span>]], color=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line"><span class="comment"># 画点</span></span><br><span class="line">plt.scatter([p1[<span class="number">0</span>], p2[<span class="number">0</span>]], [p1[<span class="number">1</span>], p2[<span class="number">1</span>]], color=<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">plt.yticks([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],[<span class="string">&#x27;XX&#x27;</span>,<span class="string">&#x27;学院&#x27;</span>,<span class="string">&#x27;校级&#x27;</span>,<span class="string">&#x27;省级&#x27;</span>,<span class="string">&#x27;国家&#x27;</span>])</span><br><span class="line">plt.xticks([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],[<span class="string">&#x27;2021&#x27;</span>,<span class="string">&#x27;2022&#x27;</span>,<span class="string">&#x27;2023&#x27;</span>,<span class="string">&#x27;2024&#x27;</span>,<span class="string">&#x27;2025&#x27;</span>])</span><br><span class="line">plt.xlabel(<span class="string">&#x27; 年&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;级别&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;在校荣誉奖项等&#x27;</span>)</span><br><span class="line">plt.savefig(SavePath+<span class="string">&#x27;\pic2.jpg&#x27;</span>,dpi=<span class="number">300</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+            </div>
+        </article>
+    </div>
+    <br>
+    
+        <div class="next-prev-post">
+            
+            
+                <div class="next-post">
+                    <div class="next gt-c-content-color-first">
+                        下一篇：<a href="/2023/05/29/%E9%A2%98%E7%9B%AE%E4%B8%8E%E6%A1%88%E4%BE%8B/" 
+                            class="post-title gt-a-link">Python前三章题目与案例</a>
+                    </div>
+                </div>
+            
+        </div>
+    
+    
+
+    
+
+    
+</div>
+
+                <div class="site-footer gt-c-content-color-first">
+    <div class="footer-main">
+        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
+        <!-- 文件位置：layout/_includes/footer.ejs -->
+        <span style="text-align: right; float: right;">Theme <a 
+            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
+            href="https://hexo.io" target="_blank">Hexo</a></span>
+        <span style="text-align: left;">Footer HTML
+</span>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </body>
+</html>
